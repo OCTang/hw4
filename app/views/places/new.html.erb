@@ -1,3 +1,4 @@
+<% if session["user_id"] %>
 <h1>New Place</h1>
 
 <form action="/places" method="post">
@@ -8,3 +9,6 @@
 
   <button>Save</button>
 </form>
+<% else %>
+  You must first <a href="/login">login</a> to post.
+<% end %>
